@@ -1,0 +1,7 @@
+#docker build -t testubuntu -f TestUbuntu .
+#docker run -it --rm --name testubuntu01 testubuntu
+
+FROM  ubuntu:trusty
+CMD while true; do echo 'hello world' | nc -l -p 91; done
+EXPOSE 91
+
